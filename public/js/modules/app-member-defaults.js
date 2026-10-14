@@ -211,6 +211,13 @@ const SETTINGS = [
     show: yesNo,
   },
   {
+    key: 'modal_panels', scope: 'device', dflt: false,
+    label: () => t('settings.layout.windows.side_panel'),
+    read: () => lsGet('haven_modal_panels') === 'true',
+    apply: (v) => setToggle('modal-panels', v),
+    show: yesNo,
+  },
+  {
     key: 'blur_nsfw', scope: 'device', dflt: true,
     label: () => t('settings.nsfw.blur'),
     read: () => lsGet('haven_blur_nsfw') !== 'false',

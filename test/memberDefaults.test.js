@@ -35,6 +35,8 @@ test('only allowlisted cosmetic settings with valid values are kept', () => {
   });
   assert.deepEqual(Object.keys(s).sort(), ['blur_nsfw', 'density', 'effects', 'interface_icons', 'layout', 'theme', 'zoom']);
   assert.deepEqual(md.cleanSettings({ theme: 'custom', zoom: 300, layout: '../evil', effects: '["<x>"]', hide_send: 'true' }), {});
+  assert.deepEqual(md.cleanSettings({ modal_panels: true }), { modal_panels: true });
+  assert.deepEqual(md.cleanSettings({ modal_panels: 'true' }), {});
   assert.deepEqual(md.cleanSettings({ theme: 'file:Neon.theme.css' }), { theme: 'file:Neon.theme.css' });
   assert.deepEqual(md.cleanSettings({ theme: 'file:../x.css' }), {});
   assert.deepEqual(md.cleanSettings('not an object'), {});

@@ -1571,6 +1571,11 @@
         "hide_send_hint": "Enter still sends. Frees the end of the message box if you never click the button.",
         "compact": "Fold the buttons into one + button",
         "compact_hint": "Upload, emoji, GIF and the rest sit behind a single + at the start of the message box, so the box gets the room."
+      },
+      "windows": {
+        "title": "Windows",
+        "side_panel": "Open windows as a side panel",
+        "side_panel_hint": "Settings, dialogs and confirmations slide in from the right at full height instead of popping up in the middle."
       }
     },
     "toggle_style": {

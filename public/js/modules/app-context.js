@@ -617,6 +617,18 @@ _setupNotifications() {
     applyCompact();
   }
 
+  // Dock every dialog to the right edge instead of centring it.
+  const modalPanelsToggle = document.getElementById('modal-panels');
+  if (modalPanelsToggle) {
+    const applyModalPanels = () => document.documentElement.toggleAttribute('data-modal-panels', modalPanelsToggle.checked);
+    modalPanelsToggle.checked = localStorage.getItem('haven_modal_panels') === 'true';
+    modalPanelsToggle.addEventListener('change', () => {
+      localStorage.setItem('haven_modal_panels', String(modalPanelsToggle.checked));
+      applyModalPanels();
+    });
+    applyModalPanels();
+  }
+
   // ── Score badge visibility ──
   // "Hide other players' badges" is a per-device client-side filter.
   // "Hide my own badge" is a server-side preference so other clients also

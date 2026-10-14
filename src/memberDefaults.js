@@ -55,6 +55,7 @@ const SETTINGS = {
   channel_scroll: { scope: 'device', check: oneOf('separate', 'combined') },
   compact_composer: { scope: 'device', check: bool },
   hide_send: { scope: 'device', check: bool },
+  modal_panels: { scope: 'device', check: bool },
   blur_nsfw: { scope: 'device', check: bool },
   hover_profile_card: { scope: 'device', check: bool },
 };

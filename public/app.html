@@ -10,7 +10,7 @@
   <link rel="manifest" href="/manifest.webmanifest">
   <title>Haven</title>
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cG9seWdvbiBwb2ludHM9IjUwLDMgOTMsMjggOTMsNzIgNTAsOTcgNyw3MiA3LDI4IiBmaWxsPSJub25lIiBzdHJva2U9IiM2YjRmZGIiIHN0cm9rZS13aWR0aD0iOCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPjx0ZXh0IHg9IjUwIiB5PSI2MyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsLEhlbHZldGljYSxzYW5zLXNlcmlmIiBmb250LXdlaWdodD0iYm9sZCIgZm9udC1zaXplPSIzOCIgZmlsbD0iIzZiNGZkYiIgb3BhY2l0eT0iMC45NSI+SDwvdGV4dD48L3N2Zz4=">
-  <link rel="stylesheet" href="/css/style.css?v=4.22.25">
+  <link rel="stylesheet" href="/css/style.css?v=4.23.2">
   <script src="/js/theme-compat.js?v=4.18.3"></script>
   <script src="/js/theme-init.js?v=4.22.9"></script>
 </head>
@@ -1612,6 +1612,14 @@
             <input type="checkbox" id="compact-composer">
           </label>
           <small class="settings-hint" style="display:block" data-i18n="settings.layout.composer.compact_hint">Upload, emoji, GIF and the rest sit behind a single + at the start of the message box, so the box gets the room.</small>
+        </div>
+        <div class="settings-subsection" id="modal-panels-subsection">
+          <small class="settings-group-label">🗂️ <span data-i18n="settings.layout.windows.title">Windows</span></small>
+          <label class="toggle-row">
+            <span data-i18n="settings.layout.windows.side_panel">Open windows as a side panel</span>
+            <input type="checkbox" id="modal-panels">
+          </label>
+          <small class="settings-hint" style="display:block" data-i18n="settings.layout.windows.side_panel_hint">Settings, dialogs and confirmations slide in from the right at full height instead of popping up in the middle.</small>
         </div>
       </div>
 
@@ -5209,7 +5217,7 @@
   <!-- Shared with the server (src/automod.js requires the same file) so both
        sides reach identical verdicts on a link. Must load before app.js. -->
   <script src="/js/automod-rules.js?v=4.21.0"></script>
-  <script type="module" src="/js/app.js?v=4.23.1"></script>
+  <script type="module" src="/js/app.js?v=4.23.2"></script>
   <script src="/js/plugin-loader.js?v=4.21.0"></script>
   <script src="/js/modules/stream-debug.js?v=4.21.0"></script>
   <script src="/js/password-eye.js?v=4.21.0"></script>
